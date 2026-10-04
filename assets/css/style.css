@@ -431,3 +431,8 @@ a.award:hover{border-color:rgba(201,162,39,.6);translate:10px 0;background:#1515
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
 }
+
+/* ── Inline icons ─────────────────────────────────── */
+.ico{width:1em;height:1em;flex:none;vertical-align:-.14em}
+#toTop>span{display:inline-grid;place-items:center}
+.marquee-track i .ico{width:.72em;height:.72em;vertical-align:-.06em}
