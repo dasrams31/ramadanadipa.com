@@ -279,3 +279,38 @@
     ScrollTrigger.getAll().forEach((st) => st.kill());
   }
 })();
+
+/* ── Blog: latest posts from RSS ─────────────────────── */
+(function () {
+  var box = document.getElementById('blog-list');
+  if (!box) return;
+  var esc = function (s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  fetch('https://blog.ramadanadipa.com/feed.xml')
+    .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+    .then(function (t) {
+      var xml = new DOMParser().parseFromString(t, 'text/xml');
+      var items = Array.prototype.slice.call(xml.querySelectorAll('item'), 0, 3);
+      if (!items.length) throw 0;
+      box.innerHTML = items.map(function (it) {
+        var g = function (tag) {
+          var n = it.querySelector(tag);
+          return n ? n.textContent.trim() : '';
+        };
+        var d = new Date(g('pubDate'));
+        var date = isNaN(d) ? '' : d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+        return '<article class="paper blog-card" data-hover>' +
+          '<p class="paper-venue">文 BLOG · ' + esc(date) + '</p>' +
+          '<h3><a href="' + esc(g('link')) + '" target="_blank" rel="noopener" data-hover>' + esc(g('title')) + '</a></h3>' +
+          '<p class="paper-abstract">' + esc(g('description')) + '</p>' +
+          '<div class="paper-links"><a href="' + esc(g('link')) + '" target="_blank" rel="noopener" data-hover>Baca Artikel <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>' +
+          '</article>';
+      }).join('');
+    })
+    .catch(function () {
+      box.innerHTML = '<p class="blog-loading">Kunjungi <a href="https://blog.ramadanadipa.com/" target="_blank" rel="noopener" style="color:var(--aka)">blog.ramadanadipa.com</a> untuk artikel terbaru.</p>';
+    });
+})();

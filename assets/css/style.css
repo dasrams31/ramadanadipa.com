@@ -349,6 +349,14 @@ a.award:hover{border-color:rgba(201,162,39,.6);translate:10px 0;background:#1515
 .paper-links a{font-size:.85rem;letter-spacing:.16em;border-bottom:1px solid var(--aka);padding-bottom:2px}
 .paper-links a:hover{color:var(--aka)}
 
+/* ── Blog (latest posts from RSS) ───────────────────── */
+.blog-list{display:flex;flex-direction:column;gap:1.2rem;max-width:900px}
+.blog-loading{color:var(--hai);font-size:.9rem;letter-spacing:.1em}
+.blog-card h3 a{text-decoration:none}
+.blog-card h3 a:hover{color:var(--aka)}
+.blog-more{margin-top:2rem}
+@media(max-width:640px){.blog-card{padding:1.4rem 1.2rem}}
+
 /* ── Contact ──────────────────────────────────────── */
 .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
