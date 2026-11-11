@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="I3M1clVo1jQxU8MoDGgPftSmZ5Yil1_WpsnhrllG7_0">
+<title>Rama Danadipa Putra Wijaya | Full Stack Developer & Co-Founder SertiKu</title>
+<meta name="description" content="Portfolio of Rama Danadipa Putra Wijaya | Full Stack Developer and Co-Founder of SertiKu. Information Systems student at AMIKOM University Yogyakarta (GPA 3.98), RuteStrip researcher, 1st & 2nd place ARCADIA x GEMASI 2026.">
+<meta name="keywords" content="Rama Danadipa Putra Wijaya, Rama Danadipa, Full Stack Developer, SertiKu Co-Founder, Laravel Developer, React Developer, RuteStrip, ARCADIA GEMASI">
+<meta name="author" content="Rama Danadipa Putra Wijaya">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ramadanadipa.com/">
+<meta name="theme-color" content="#0b0b0d">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ramadanadipa.com">
+<meta property="og:title" content="Rama Danadipa Putra Wijaya | Full Stack Developer & Co-Founder SertiKu">
+<meta property="og:description" content="Portfolio of Rama Danadipa Putra Wijaya | Full Stack Developer, Co-Founder of SertiKu, RuteStrip researcher, ARCADIA x GEMASI 2026 winner.">
+<meta property="og:url" content="https://ramadanadipa.com/">
+<meta property="og:image" content="https://ramadanadipa.com/assets/img/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:locale" content="en_US">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rama Danadipa Putra Wijaya | Full Stack Developer & Co-Founder SertiKu">
+<meta name="twitter:description" content="Portfolio of Rama Danadipa Putra Wijaya | Full Stack Developer, Co-Founder of SertiKu, RuteStrip researcher, ARCADIA x GEMASI 2026 winner.">
+<meta name="twitter:image" content="https://ramadanadipa.com/assets/img/og-cover.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rama Danadipa Putra Wijaya",
+  "url": "https://ramadanadipa.com/",
+  "image": "https://ramadanadipa.com/assets/img/avatar.svg",
+  "jobTitle": "Full Stack Developer",
+  "description": "Full Stack Developer and Co-Founder of SertiKu. Information Systems student at AMIKOM University Yogyakarta with a 3.98/4.00 GPA.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Sleman", "addressRegion": "Yogyakarta", "addressCountry": "ID" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitas AMIKOM Yogyakarta" },
+  "knowsAbout": ["Laravel", "React", "Next.js", "TypeScript", "PostgreSQL", "MySQL", "REST API", "Machine Learning", "SBERT", "Web3"],
+  "award": [
+    "1st Place ARCADIA x GEMASI 2026 | SertiKu (Applications and Information Systems)",
+    "2nd Place ARCADIA x GEMASI 2026 | RuteStrip (Data Science)"
+  ],
+  "sameAs": [
+    "https://github.com/RamsNotes31",
+    "https://www.linkedin.com/in/ramadanadipa",
+    "https://www.instagram.com/ramsdnipa_",
+    "https://orcid.org/0009-0007-2320-3758"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20261106">
+<script type="importmap">
+{ "imports": { "three": "./assets/js/vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-kanji">侍</div>
+  <div class="pre-name">RAMA DANADIPA</div>
+  <div class="pre-bar"><span id="preBarFill"></span></div>
+  <div class="pre-count"><span id="preCount">00</span> / 100</div>
+</div>
+
+<!-- ══════════ 3D BACKGROUND ══════════ -->
+<canvas id="scene3d" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══════════ SLASH TRANSITION ══════════ -->
+<div id="slash" aria-hidden="true"></div>
+
+<!-- ══════════ CUSTOM CURSOR ══════════ -->
+<div id="cursorDot" aria-hidden="true"></div>
+<div id="cursorRing" aria-hidden="true"></div>
+<button id="toTop" aria-label="Back to top" data-hover>
+  <svg viewBox="0 0 44 44" aria-hidden="true"><circle class="tt-bg" cx="22" cy="22" r="19"/><circle class="tt-fg" cx="22" cy="22" r="19"/></svg>
+  <span><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></span>
+</button>
+
+<!-- ══════════ NAV ══════════ -->
+<header id="nav">
+  <a class="brand" href="#top" data-hover>
+    <span class="brand-kanji">侍</span>
+    <span class="brand-name">RAMA<span>.</span>DANADIPA</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#tentang" data-hover>道 About</a>
+    <a href="#proyek" data-hover>作 Projects</a>
+    <a href="#pengalaman" data-hover>歴 Experience</a>
+    <a href="#keahlian" data-hover>技 Skills</a>
+    <a href="#blog" data-hover>文 Blog</a>
+    <a href="#kontak" data-hover class="nav-cta">絡 Contact</a>
+  </nav>
+  <button id="menuBtn" aria-label="Menu"><span></span><span></span></button>
+</header>
+<div id="mobileMenu">
+  <a href="#tentang">道 | About</a>
+  <a href="#proyek">作 | Projects</a>
+  <a href="#pengalaman">歴 | Experience</a>
+  <a href="#keahlian">技 | Skills</a>
+  <a href="#penghargaan">誉 | Awards</a>
+  <a href="#blog">文 | Blog</a>
+  <a href="#kontak">絡 | Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker reveal-line"><span class="jp">侍</span><span class="sep">/</span> SAMURAI OF CODE | YOGYAKARTA, ID</p>
+      <h1 class="hero-title">
+        <span class="reveal-line"><span>RAMA <em>DANADIPA</em></span></span>
+      </h1>
+      <span class="hero-rule reveal-line" aria-hidden="true"><span></span></span>
+      <p class="hero-sub reveal-line"><span>Full Stack Developer <i>&</i> Co-Founder <a href="https://sertiku.id" target="_blank" rel="noopener" data-hover>SertiKu</a> | I build clean, fast, and reliable web applications, from database to user interface.</span></p>
+      <div class="hero-cta reveal-line">
+        <span><a class="btn btn-primary" href="#proyek" data-hover><span>View Work</span><span class="btn-kanji">作</span></a></span>
+        <span><a class="btn btn-ghost" href="#kontak" data-hover><span>Get in Touch</span><span class="btn-kanji">絡</span></a></span>
+      </div>
+      <div class="hanko reveal-line" aria-hidden="true"><span><span>ラマ</span></span></div>
+    </div>
+    <div class="hero-kanji-bg" aria-hidden="true">侍</div>
+    <div class="hero-enso" aria-hidden="true"></div>
+    <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
+    <aside class="side-rail left" aria-hidden="true"><span>武士道 | BUSHIDO</span></aside>
+    <aside class="side-rail right" aria-hidden="true"><span>令和八年 | 2026</span></aside>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>侍 FULL STACK DEVELOPER <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 道 LARAVEL <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> REACT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> NEXT.JS <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> POSTGRESQL <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> AI INTEGRATION <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 誉 ARCADIA x GEMASI 2026 <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i>&nbsp;</span>
+      <span>侍 FULL STACK DEVELOPER <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 道 LARAVEL <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> REACT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> NEXT.JS <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> POSTGRESQL <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> AI INTEGRATION <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 誉 ARCADIA x GEMASI 2026 <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i>&nbsp;</span>
+    </div>
+    <div class="marquee-track reverse outline-row">
+      <span>道 BUSHIDO <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 技 CRAFT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 心 HEART <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 誉 HONOR <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 作 CREATE <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 絡 CONNECT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> YOGYAKARTA <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i>&nbsp;</span>
+      <span>道 BUSHIDO <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 技 CRAFT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 心 HEART <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 誉 HONOR <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 作 CREATE <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> 絡 CONNECT <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i> YOGYAKARTA <i><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg></i>&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ══════════ TENTANG / ABOUT ══════════ -->
+  <section id="tentang" class="section">
+    <span class="sec-ghost" aria-hidden="true">道</span>
+    <div class="sec-head">
+      <span class="sec-index">一</span>
+      <div>
+        <p class="sec-kicker">道 | THE WAY</p>
+        <h2 class="sec-title">About</h2>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar" data-hover>
+        <img src="assets/img/avatar.svg" alt="Avatar of Rama Danadipa Putra Wijaya | samurai kanji">
+        <span class="avatar-ring" aria-hidden="true"></span>
+        <span class="avatar-caption">侍 | Yogyakarta, Indonesia</span>
+      </div>
+      <div class="about-body">
+        <p class="lead">I'm <strong>Rama Danadipa Putra Wijaya</strong>, an Information Systems student at AMIKOM University Yogyakarta focused on <em>software engineering</em>, <em>web development</em>, and <em>data-oriented problem solving</em>.</p>
+        <p>As a Full Stack Developer and Co-Founder of <strong>SertiKu</strong>, I build a digital certificate issuance and verification platform | from backend architecture to user experience. Beyond that, I research hiking route recommendation systems (RuteStrip) published in a SINTA-indexed journal, and serve as a programming lab teaching assistant.</p>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="3.98" data-decimals="2">0</span><span class="stat-label">GPA / 4.00</span></div>
+          <div class="stat"><span class="stat-num" data-count="17">0</span><span class="stat-label">Projects Completed</span></div>
+          <div class="stat"><span class="stat-num" data-count="19">0</span><span class="stat-label">Certifications</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">ARCADIA Wins</span></div>
+        </div>
+        <div class="edu">
+          <h3>歴 Education</h3>
+          <ul>
+            <li><span>2023 | Present</span><strong>AMIKOM University Yogyakarta</strong><em>Information Systems · GPA 3.98/4.00</em></li>
+            <li><span>2026</span><strong>Coding Camp | DBS Foundation</strong><em>Full Stack Developer Learning Path</em></li>
+            <li><span>2019 | 2022</span><strong>SMA Negeri 1 Blitar</strong><em>Science</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROYEK ══════════ -->
+  <section id="proyek" class="section">
+    <span class="sec-ghost" aria-hidden="true">作</span>
+    <div class="sec-head">
+      <span class="sec-index">二</span>
+      <div>
+        <p class="sec-kicker">作 | WORKS</p>
+        <h2 class="sec-title">Selected Projects</h2>
+      </div>
+    </div>
+
+    <div class="featured-grid">
+      <article class="pcard pcard-featured tilt" data-hover>
+        <span class="pcard-no">01</span>
+        <div class="pcard-body">
+          <h3>SertiKu</h3>
+          <p class="pcard-role">Co-Founder & Full Stack Developer</p>
+          <p>A digital certificate issuance, management, and verification platform powered by QR codes and blockchain | certificates that are easy to verify and hard to forge.</p>
+          <div class="tags"><span>Laravel</span><span>Tailwind</span><span>MySQL</span><span>QR Verification</span><span>Blockchain</span></div>
+          <div class="pcard-links"><a href="https://sertiku.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard pcard-featured tilt" data-hover>
+        <span class="pcard-no">02</span>
+        <div class="pcard-body">
+          <h3>RuteStrip V3</h3>
+          <p class="pcard-role">Researcher & System Developer</p>
+          <p>A GPX-based hiking route recommendation app using Content-Based Filtering, SBERT, and Cosine Similarity | helping hikers choose routes that match their ability.</p>
+          <div class="tags"><span>Laravel</span><span>SBERT</span><span>GPX</span><span>Cosine Similarity</span></div>
+          <div class="pcard-links">
+            <a href="https://rutestrip.web.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a href="https://github.com/RamsNotes31/RuteStripV3" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="pcard pcard-featured tilt" data-hover>
+        <span class="pcard-no">03</span>
+        <div class="pcard-body">
+          <h3>JIVARA</h3>
+          <p class="pcard-role">Full Stack Developer</p>
+          <p>AI healthcare monitoring & medication management platform | medication reminders, drug-food interaction detection, and patient monitoring dashboards.</p>
+          <div class="tags"><span>React</span><span>Express</span><span>PostgreSQL</span><span>AI Integration</span></div>
+          <div class="pcard-links">
+            <a href="https://jivara.web.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a href="https://github.com/jivara-capstone" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="project-grid">
+      <article class="pcard tilt" data-hover>
+        <h3>Peka AI</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>AI news brand posting four times a day across Threads, Instagram, and Facebook | automated content pipeline, daily blog, and Telegram channel.</p>
+        <div class="tags"><span>React</span><span>Flask</span><span>Automation</span><span>Content</span></div>
+        <div class="pcard-links"><a href="https://peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Piko</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>IELTS speaking coach with a roast-style AI voice agent | speech-to-text, voice replies, and band-score rewrites.</p>
+        <div class="tags"><span>Flask</span><span>Whisper</span><span>Edge TTS</span><span>Voice AI</span></div>
+        <div class="pcard-links"><a href="https://piko.peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>SnaPeka</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>URL shortener and microsite in one place | custom slugs, click stats, and a 10-second interstitial, free without ads.</p>
+        <div class="tags"><span>Next.js</span><span>SQLite</span><span>Shortlink</span></div>
+        <div class="pcard-links"><a href="https://s.peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/dasrams31/peka-shortlink" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Peka Store</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>Digital products and premium accounts store | KlikQRIS checkout, instant file delivery, and customer accounts.</p>
+        <div class="tags"><span>Next.js</span><span>KlikQRIS</span><span>E-Commerce</span></div>
+        <div class="pcard-links"><a href="https://store.peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Peka Tools</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>A curated directory of open-source tools and skills | every repo verified before it gets listed.</p>
+        <div class="tags"><span>Directory</span><span>Open Source</span><span>Curation</span></div>
+        <div class="pcard-links"><a href="https://tools.peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/dasrams31/peka-tools" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Blog Peka</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>The written home of Peka content | daily AI news articles with a public webchat room for readers.</p>
+        <div class="tags"><span>Flask</span><span>Blog</span><span>SEO</span></div>
+        <div class="pcard-links"><a href="https://blog.peka.ai.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/dasrams31/peka-blog" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Agentarium</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>A living social network where 90 autonomous AI agents post, debate, and evolve — powered by 3 local LLM models (Muse, Llama 3.2, SmolLM2). Humans watch, like, and comment. Features: Wild Zone, Reels, Live Spaces, PWA.</p>
+        <div class="tags"><span>FastAPI</span><span>SQLite</span><span>llama.cpp</span><span>AI Agents</span></div>
+        <div class="pcard-links"><a href="https://agentarium.ramadanadipa.com" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/dasrams31/agentarium" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>MiminNgiler</h3><p class="pcard-role">Founder / Content Creator</p>
+        <p>Shopee affiliate brand with automated content pipeline — daily auto-posting to Threads, Instagram, and Facebook. 30-day content calendar, AI-generated videos, catalog site with auto-sync.</p>
+        <div class="tags"><span>Affiliate</span><span>Automation</span><span>Content</span></div>
+        <div class="pcard-links"><a href="https://miminngiler.web.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/dasrams31/miminngiler" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Local AI Stack</h3><p class="pcard-role">AI Engineer</p>
+        <p>Self-hosted AI infrastructure: 9Router model gateway, llama.cpp inference servers (Llama 3.2 1B + SmolLM2 1.7B), Telegram bot gateway. Zero cloud dependency, runs on a single VPS.</p>
+        <div class="tags"><span>9Router</span><span>llama.cpp</span><span>Self-Hosted</span></div>
+        <div class="pcard-links"><a href="https://github.com/dasrams31/hermes-9router-muse" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Aeternum Webspace Studio</h3><p class="pcard-role">Founder / Full Stack Developer</p>
+        <p>Landing page & public website studio for company websites, landing pages, and internal web apps.</p>
+        <div class="tags"><span>TypeScript</span><span>Landing Page</span><span>Deployment</span></div>
+        <div class="pcard-links"><a href="https://aeternumwebspace.co.id" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/RamsNotes31/AeternumWebspaceStudio" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>RuteStrip Research Prototype</h3><p class="pcard-role">Researcher</p>
+        <p>A hiking trail recommendation system prototype | Precision@5 of 0.60 across 39 routes in Java. Published in a SINTA-indexed journal.</p>
+        <div class="tags"><span>Python</span><span>SBERT</span><span>SINTA Journal</span></div>
+        <div class="pcard-links"><a href="https://sistemasi.ftik.unisi.ac.id/index.php/stmsi/article/view/6087" target="_blank" rel="noopener" data-hover>Paper <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/RamsNotes31/rutestrip" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>TuneBoss Inventory</h3><p class="pcard-role">Freelance Full Stack Developer</p>
+        <p>An inventory management app for TuneBoss Indonesia's operations | stock, internal dashboards, and admin workflows.</p>
+        <div class="tags"><span>Full Stack</span><span>Dashboard</span><span>Database</span></div>
+        <div class="pcard-links"><a href="https://tuneboss-nine.vercel.app" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>TuneBoss Marketplace</h3><p class="pcard-role">Full Stack Developer</p>
+        <p>Marketplace frontend | music product catalog, product detail pages, and a ready-to-use shopping flow.</p>
+        <div class="tags"><span>E-Commerce</span><span>Frontend</span><span>Vercel</span></div>
+        <div class="pcard-links"><a href="https://tuneboss-frontend.vercel.app" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>TuneBoss Official Website</h3><p class="pcard-role">Full Stack Developer</p>
+        <p>TuneBoss Indonesia's official landing page | brand, services, and a responsive main digital channel.</p>
+        <div class="tags"><span>Landing Page</span><span>Responsive</span><span>Brand</span></div>
+        <div class="pcard-links"><a href="https://tuneboss-landing.vercel.app" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>TipInAja</h3><p class="pcard-role">Founder</p>
+        <p>A Web3-based digital tipping & donation platform concept | transparent, low-fee, for creators and supporters.</p>
+        <div class="tags"><span>Web3</span><span>DeFi</span><span>Creator Economy</span></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>TugasRadar</h3><p class="pcard-role">Full Stack Developer</p>
+        <p>A smart task management app | track tasks, priorities, and work progress in a structured way.</p>
+        <div class="tags"><span>TypeScript</span><span>Productivity</span></div>
+        <div class="pcard-links"><a href="https://github.com/RamsNotes31/TugasRadar" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+      <article class="pcard tilt" data-hover>
+        <h3>Personal Portfolio</h3><p class="pcard-role">Developer</p>
+        <p>My personal portfolio website | Next.js with an AI chatbot trained on my portfolio dataset. The previous version of this site.</p>
+        <div class="tags"><span>Next.js</span><span>TypeScript</span><span>OpenRouter</span></div>
+        <div class="pcard-links"><a href="https://ramadanadipa.vercel.app" target="_blank" rel="noopener" data-hover>Visit <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/RamsNotes31/portfolio" target="_blank" rel="noopener" data-hover>GitHub <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════ PENGALAMAN ══════════ -->
+  <section id="pengalaman" class="section">
+    <span class="sec-ghost" aria-hidden="true">歴</span>
+    <div class="sec-head">
+      <span class="sec-index">三</span>
+      <div>
+        <p class="sec-kicker">歴 | HISTORY</p>
+        <h2 class="sec-title">Experience</h2>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tline" aria-hidden="true"></div>
+      <article class="titem">
+        <span class="tdate">Feb 2026 | Present</span>
+        <h3>Freelance Full Stack Developer</h3><p class="torg">Aeternum Webspace Studio</p>
+        <p>Building and maintaining client web applications (Tuneboss Inventory App) | frontend, backend, REST APIs, database design, testing, deployment, and performance optimization.</p>
+      </article>
+      <article class="titem">
+        <span class="tdate">Dec 2025 | Present</span>
+        <h3>Startup Incubation Participant</h3><p class="torg">ABP Startup Incubator</p>
+        <p>Startup incubation for SertiKu | user validation, business modeling, MVP development, QR verification, and pitch preparation.</p>
+      </article>
+      <article class="titem">
+        <span class="tdate">Feb 2025 | Present</span>
+        <h3>Teaching Assistant</h3><p class="torg">Teaching Assistant Forum | AMIKOM University Yogyakarta</p>
+        <p>Assisting Programming I, II, and Digital Business labs | Kotlin, OOP, RESTful APIs, Laravel, MySQL, code reviews.</p>
+      </article>
+      <article class="titem">
+        <span class="tdate">Jun 2024 | Mar 2026</span>
+        <h3>Human Interest Staff</h3><p class="torg">FOSSIL</p>
+        <p>Open-source community engagement and helping organize the FOSSIL Cyber Security Seminar 2024.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════ KEAHLIAN ══════════ -->
+  <section id="keahlian" class="section">
+    <span class="sec-ghost" aria-hidden="true">技</span>
+    <div class="sec-head">
+      <span class="sec-index">四</span>
+      <div>
+        <p class="sec-kicker">技 | TECHNIQUE</p>
+        <h2 class="sec-title">Skills</h2>
+      </div>
+    </div>
+    <div class="skill-grid">
+      <div class="skill"><h3>Full-Stack Development</h3><p>HTML · CSS · JavaScript · TypeScript · React.js · Next.js · Laravel · Express.js · FastAPI · REST API · Responsive Web · PWA</p></div>
+      <div class="skill"><h3>Backend & API</h3><p>Laravel · Express.js · Node.js · FastAPI · CodeIgniter · RESTful API · Authentication · Authorization · Validation · Postman</p></div>
+      <div class="skill"><h3>Database & Data</h3><p>MySQL · PostgreSQL · Supabase · Prisma ORM · Database Design · SQL · Data Fusion · GPX Data · Query Debugging</p></div>
+      <div class="skill"><h3>Research & AI</h3><p>Python · SBERT · NLP · Cosine Similarity · Content-Based Filtering · RAG Chatbot · Machine Learning · AI Integration · Gemini · OpenRouter</p></div>
+      <div class="skill"><h3>Frontend & UI</h3><p>React.js · Next.js · Tailwind CSS · Bootstrap · Figma · Component-Based UI · Landing Page · Dashboard UI</p></div>
+      <div class="skill"><h3>Tools & Workflow</h3><p>Git · GitHub · Vercel · Postman · RabbitMQ · Debugging · Testing · Deployment · Performance Optimization</p></div>
+      <div class="skill"><h3>Product & Startup</h3><p>User Validation · Business Model · MVP Development · Pitching · Product Iteration · Web3 Product · Digital Certificate Workflow</p></div>
+      <div class="skill"><h3>Soft Skills</h3><p>Problem Solving · Teamwork · Communication · Adaptability · Critical Thinking · Creativity · Continuous Learning · Discipline</p></div>
+    </div>
+  </section>
+
+  <!-- ══════════ PENGHARGAAN ══════════ -->
+  <section id="penghargaan" class="section">
+    <span class="sec-ghost" aria-hidden="true">誉</span>
+    <div class="sec-head">
+      <span class="sec-index">五</span>
+      <div>
+        <p class="sec-kicker">誉 | HONOR</p>
+        <h2 class="sec-title">Awards</h2>
+      </div>
+    </div>
+    <div class="award-list">
+      <a class="award tilt" href="https://www.instagram.com/p/DUcosAhk3y0/?img_index=3" target="_blank" rel="noopener" data-hover>
+        <span class="award-year">2026</span>
+        <div><h3>1st Place | SertiKu</h3><p>ARCADIA x GEMASI · Applications and Information Systems Category</p></div>
+        <span class="award-arrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      </a>
+      <a class="award tilt" href="https://www.instagram.com/p/DT2MJvsk-9v/?img_index=9" target="_blank" rel="noopener" data-hover>
+        <span class="award-year">2026</span>
+        <div><h3>2nd Place | RuteStrip</h3><p>ARCADIA x GEMASI · Data Science Category</p></div>
+        <span class="award-arrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      </a>
+      <div class="award">
+        <span class="award-year">2026</span>
+        <div><h3>PT Aeternum Kreasikan Bersama</h3><p>Deed of establishment | the legal foundation of Aeternum Webspace Studio</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PUBLIKASI ══════════ -->
+  <section id="publikasi" class="section">
+    <span class="sec-ghost" aria-hidden="true">論</span>
+    <div class="sec-head">
+      <span class="sec-index">六</span>
+      <div>
+        <p class="sec-kicker">論 | THESIS</p>
+        <h2 class="sec-title">Publication</h2>
+      </div>
+    </div>
+    <article class="paper tilt" data-hover>
+      <p class="paper-venue">Sistemasi: Jurnal Sistem Informasi · Vol 15 No 4 (2026)</p>
+      <h3>Mountain Hiking Route Recommendation System using Content-based Filtering with SBERT and Cosine Similarity</h3>
+      <p class="paper-authors">Rama Danadipa Putra Wijaya, Arif Nur Rahman</p>
+      <p class="paper-abstract">Developed a mountain hiking route recommendation system using Content-Based Filtering with Sentence-BERT for semantic route-description features, numeric GPX attribute integration, and Cosine Similarity. Evaluated on 39 hiking routes across Java with an average Precision@5 of 0.60 | outperforming TF-IDF at 0.25.</p>
+      <div class="paper-links">
+        <a href="https://sistemasi.ftik.unisi.ac.id/index.php/stmsi/article/view/6087" target="_blank" rel="noopener" data-hover>Read Paper <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://doi.org/10.32520/stmsi.v15i4.6087" target="_blank" rel="noopener" data-hover>DOI <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ══════════ BLOG ══════════ -->
+  <section id="blog" class="section">
+    <span class="sec-ghost" aria-hidden="true">文</span>
+    <div class="sec-head">
+      <span class="sec-index">七</span>
+      <div>
+        <p class="sec-kicker">文 | WRITINGS</p>
+        <h2 class="sec-title">Blog</h2>
+      </div>
+    </div>
+    <div id="blog-list" class="blog-list">
+      <p class="blog-loading">Memuat artikel terbaru…</p>
+    </div>
+    <div class="blog-more">
+      <a class="btn btn-ghost" href="https://blog.ramadanadipa.com/" target="_blank" rel="noopener" data-hover><span>Semua Artikel</span><span class="btn-kanji">文</span></a>
+    </div>
+  </section>
+
+  <!-- ══════════ KONTAK ══════════ -->
+  <section id="kontak" class="section">
+    <span class="sec-ghost" aria-hidden="true">絡</span>
+    <div class="sec-head">
+      <span class="sec-index">八</span>
+      <div>
+        <p class="sec-kicker">絡 | CONNECT</p>
+        <h2 class="sec-title">Contact</h2>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-main">
+        <p class="contact-lead">Interested in collaborating, discussing research, or need a developer for your project?</p>
+        <a class="contact-mail" href="mailto:ramadanadipa176@gmail.com" data-hover>ramadanadipa176@gmail.com</a>
+        <p class="contact-phone">+62 896-9710-0997 · Ngemplak, Sleman, Yogyakarta</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/RamsNotes31" target="_blank" rel="noopener" data-hover>
+          <span class="cicon"><img src="assets/img/github.svg" alt=""></span>
+          <span class="ctext"><b>GitHub</b><small>github.com/RamsNotes31</small></span>
+          <span class="carrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a href="https://www.linkedin.com/in/ramadanadipa" target="_blank" rel="noopener" data-hover>
+          <span class="cicon"><img src="assets/img/linkedin.svg" alt=""></span>
+          <span class="ctext"><b>LinkedIn</b><small>linkedin.com/in/ramadanadipa</small></span>
+          <span class="carrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a href="https://www.instagram.com/ramsdnipa_" target="_blank" rel="noopener" data-hover>
+          <span class="cicon"><img src="assets/img/instagram.svg" alt=""></span>
+          <span class="ctext"><b>Instagram</b><small>instagram.com/ramsdnipa_</small></span>
+          <span class="carrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <a href="https://orcid.org/0009-0007-2320-3758" target="_blank" rel="noopener" data-hover>
+          <span class="cicon"><img src="assets/img/orcid.svg" alt=""></span>
+          <span class="ctext"><b>ORCID</b><small>orcid.org/0009-0007-2320-3758</small></span>
+          <span class="carrow"><svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="foot-mark" aria-hidden="true">RAMA DANADIPA</div>
+    <span class="foot-kanji">侍</span>
+    <p>© 2026 Rama Danadipa Putra Wijaya | Yogyakarta, Indonesia.</p>
+    <nav class="foot-links">
+      <a href="#tentang" data-hover>About</a>
+      <a href="#proyek" data-hover>Projects</a>
+      <a href="#pengalaman" data-hover>Experience</a>
+      <a href="#blog" data-hover>Blog</a>
+      <a href="#kontak" data-hover>Contact</a>
+    </nav>
+    <a href="#top" data-hover>Back to top <svg class="ico" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a>
+  </footer>
+
+</main>
+
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script type="module" src="assets/js/scene.js?v=20261106"></script>
+<script src="assets/js/main.js"></script>
+<!-- Ramadanadipa chat widgets: Webchat (kiri, ruang chat publik TANPA AI) + Tanya Blog (kanan, guardrail ketat).
+     Dua panel bisa switch: buka satu menutup yang lain.
+     Webchat API: https://ramadanadipa.com/api/webchat (GET ?after=, POST {name, body})
+     Tanya API: https://ramadanadipa.com/api/chat-ramadanadipa -->
+<style>
+.rdchat-fab{position:fixed;bottom:18px;z-index:9998;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid #f4f1ea;box-shadow:0 6px 20px rgba(0,0,0,.45)}
+.rdchat-fab svg{width:24px;height:24px}
+.rdchat-fab.umum{left:18px;background:#e23a2e}
+.rdchat-fab.umum svg{fill:#fff}
+.rdchat-fab.tanya{right:18px;background:#c9a227}
+.rdchat-fab.tanya svg{fill:#17171c}
+.rdchat-fab.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.rdchat-panel{position:fixed;bottom:18px;z-index:9999;width:min(360px,calc(100vw - 28px));height:min(560px,calc(100vh - 36px));background:#17171c;color:#f4f1ea;border:2px solid rgba(244,241,234,.16);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s}
+.rdchat-panel.open{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .25s ease,transform .25s ease}
+.rdchat-panel.umum{left:18px}
+.rdchat-panel.tanya{right:18px}
+.rdchat-head{display:flex;align-items:center;gap:10px;padding:14px 14px 12px;border-bottom:1px solid rgba(244,241,234,.12)}
+.rdchat-head .tile{width:36px;height:36px;flex:none;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.rdchat-head .tile svg{width:20px;height:20px}
+.rdchat-panel.umum .tile{background:#e23a2e}
+.rdchat-panel.umum .tile svg{fill:#fff}
+.rdchat-panel.tanya .tile{background:#c9a227}
+.rdchat-panel.tanya .tile svg{fill:#17171c}
+.rdchat-head h4{margin:0;font-size:15px;font-weight:800;letter-spacing:-.01em}
+.rdchat-head p{margin:2px 0 0;font-size:11.5px;font-weight:600;opacity:.6}
+.rdchat-close{margin-left:auto;flex:none;width:32px;height:32px;border-radius:9px;border:1.5px solid rgba(244,241,234,.25);background:transparent;color:#f4f1ea;font-size:17px;font-weight:800;line-height:1;cursor:pointer}
+.rdchat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.rdchat-msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+.rdchat-msg.user{align-self:flex-end;background:#e23a2e;color:#fff;border-bottom-right-radius:4px}
+.rdchat-panel.tanya .rdchat-msg.user{background:#c9a227;color:#17171c}
+.rdchat-msg.bot{align-self:flex-start;background:rgba(244,241,234,.08);border-bottom-left-radius:4px}
+.rdchat-msg.bot a{color:#e8b4ae}
+.rdchat-panel.tanya .rdchat-msg.bot a{color:#e3c878}
+.rdchat-msg.mine{align-self:flex-end;background:#e23a2e;color:#fff;border-bottom-right-radius:4px}
+.rdchat-msg.other{align-self:flex-start;background:rgba(244,241,234,.08);border-bottom-left-radius:4px}
+.rdchat-meta{display:flex;gap:8px;font-size:11px;opacity:.75;margin-bottom:3px}
+.rdchat-meta b{font-weight:800}
+.rdchat-note{align-self:center;text-align:center;font-size:12px;opacity:.55;line-height:1.5;padding:2px 8px}
+.rdchat-typing{opacity:.6;font-size:13px}
+.rdchat-form{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(244,241,234,.12)}
+.rdchat-form input{flex:1;min-width:0;background:rgba(244,241,234,.07);border:1.5px solid rgba(244,241,234,.16);border-radius:11px;color:#f4f1ea;font-size:14px;padding:11px 12px;outline:none}
+.rdchat-form input:focus{border-color:#e23a2e}
+.rdchat-panel.tanya .rdchat-form input:focus{border-color:#c9a227}
+.rdchat-form button{flex:none;background:#e23a2e;color:#fff;border:none;border-radius:11px;font-size:14px;font-weight:800;padding:0 16px;cursor:pointer}
+.rdchat-panel.tanya .rdchat-form button{background:#c9a227;color:#17171c}
+.rdchat-form button:disabled{opacity:.5;cursor:default}
+.rdchat-form-web{flex-direction:column}
+.rdchat-form-web .rdchat-msgrow{display:flex;gap:8px;width:100%}
+@media (max-width:480px){
+  .rdchat-panel{left:14px !important;right:14px !important;bottom:14px;width:auto}
+  .rdchat-fab.umum{left:14px;bottom:14px}
+  .rdchat-fab.tanya{right:14px;bottom:14px}
+}
+</style>
+<button class="rdchat-fab umum" id="rdchat-fab-umum" type="button" aria-label="Buka Webchat"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg></button>
+<button class="rdchat-fab tanya" id="rdchat-fab-tanya" type="button" aria-label="Buka Tanya Blog"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="10.6" width="1.6" height="4.2" rx="0.8" fill="#111"/><rect x="19" y="10.6" width="1.6" height="4.2" rx="0.8" fill="#111"/><line x1="12" y1="6.2" x2="12" y2="3.4" stroke="#111" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="2.3" r="1.15" fill="#ffd60a" stroke="#111" stroke-width="1"/><rect x="5" y="6.2" width="14" height="12.4" rx="3.4" fill="#111"/><circle cx="9.1" cy="11.9" r="1.35" fill="#ffd60a"/><circle cx="14.9" cy="11.9" r="1.35" fill="#ffd60a"/><path d="M9.2 15.3 Q12 17.3 14.8 15.3" fill="none" stroke="#ffd60a" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+<div class="rdchat-panel umum" id="rdchat-panel-umum" role="dialog" aria-label="Webchat" aria-hidden="true">
+  <div class="rdchat-head"><span class="tile"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg></span><div><h4>Webchat</h4><p>Ngobrol bareng pengunjung lain</p></div><button class="rdchat-close" type="button" aria-label="Tutup">&times;</button></div>
+  <div class="rdchat-body" id="rdchat-body-umum"></div>
+  <form class="rdchat-form rdchat-form-web" id="rdchat-form-umum"><input type="text" id="rdchat-name-umum" placeholder="Nama kamu..." maxlength="30" autocomplete="off"><div class="rdchat-msgrow"><input type="text" id="rdchat-input-umum" placeholder="Tulis pesan..." maxlength="500" autocomplete="off"><button type="submit">Kirim</button></div></form>
+</div>
+<div class="rdchat-panel tanya" id="rdchat-panel-tanya" role="dialog" aria-label="Tanya Blog" aria-hidden="true">
+  <div class="rdchat-head"><span class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="10.6" width="1.6" height="4.2" rx="0.8" fill="#111"/><rect x="19" y="10.6" width="1.6" height="4.2" rx="0.8" fill="#111"/><line x1="12" y1="6.2" x2="12" y2="3.4" stroke="#111" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="2.3" r="1.15" fill="#ffd60a" stroke="#111" stroke-width="1"/><rect x="5" y="6.2" width="14" height="12.4" rx="3.4" fill="#111"/><circle cx="9.1" cy="11.9" r="1.35" fill="#ffd60a"/><circle cx="14.9" cy="11.9" r="1.35" fill="#ffd60a"/><path d="M9.2 15.3 Q12 17.3 14.8 15.3" fill="none" stroke="#ffd60a" stroke-width="1.5" stroke-linecap="round"/></svg></span><div><h4>Tanya Blog</h4><p>Seputar artikel &amp; tentang Rama</p></div><button class="rdchat-close" type="button" aria-label="Tutup">&times;</button></div>
+  <div class="rdchat-body" id="rdchat-body-tanya"></div>
+  <form class="rdchat-form" id="rdchat-form-tanya"><input type="text" placeholder="Tanya soal artikel atau Rama..." maxlength="1000" autocomplete="off"><button type="submit">Kirim</button></form>
+</div>
+<script>
+(function(){
+  var widgets = {};
+  function closeOther(mode){
+    Object.keys(widgets).forEach(function(m){ if (m !== mode) widgets[m].close(); });
+  }
+
+  /* ===== TANYA BLOG (AI, guardrail ketat) ===== */
+  (function(){
+    var mode = 'tanya';
+    var API_URL = 'https://ramadanadipa.com/api/chat-ramadanadipa';
+    var GREET = 'Halo! Tanya apa aja seputar artikel blog dan tentang Rama. Di luar itu aku nggak bisa jawab ya.';
+    var KEY = 'rd-chat-tanya';
+    var panel = document.getElementById('rdchat-panel-' + mode);
+    var fab = document.getElementById('rdchat-fab-' + mode);
+    var body = document.getElementById('rdchat-body-' + mode);
+    var form = document.getElementById('rdchat-form-' + mode);
+    var input = form.querySelector('input');
+    var btn = form.querySelector('button');
+    var closeBtn = panel.querySelector('.rdchat-close');
+    var history = [];
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) history = JSON.parse(raw).filter(function(m){ return m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string'; });
+    } catch(e) { history = []; }
+    function save(){ try { localStorage.setItem(KEY, JSON.stringify(history.slice(-30))); } catch(e){} }
+    function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function linkify(s){
+      var t = esc(s);
+      t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      return t.replace(/(?<!href=")(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+    }
+    function addMsg(role, text){
+      var div = document.createElement('div');
+      div.className = 'rdchat-msg ' + role;
+      div.innerHTML = linkify(text);
+      body.appendChild(div);
+      body.scrollTop = body.scrollHeight;
+      return div;
+    }
+    function render(){
+      body.innerHTML = '';
+      addMsg('assistant', GREET);
+      history.forEach(function(m){ addMsg(m.role, m.content); });
+    }
+    function open(){
+      closeOther(mode);
+      panel.classList.add('open');
+      panel.setAttribute('aria-hidden', 'false');
+      fab.classList.add('hidden');
+      render();
+      input.focus();
+    }
+    function close(){
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+      fab.classList.remove('hidden');
+    }
+    fab.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var text = input.value.trim();
+      if (!text || btn.disabled) return;
+      input.value = '';
+      history.push({role: 'user', content: text});
+      addMsg('user', text);
+      save();
+      btn.disabled = true;
+      var typing = addMsg('assistant', 'Rama lagi ngetik...');
+      typing.classList.add('rdchat-typing');
+      var payload = {mode: mode, messages: history.slice(-16)};
+      fetch(API_URL, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)})
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          typing.remove();
+          var reply = (data && data.reply) || (data && data.error) || 'Chatbot lagi sibuk, coba lagi sebentar lagi ya.';
+          history.push({role: 'assistant', content: reply});
+          addMsg('assistant', reply);
+          save();
+        })
+        .catch(function(){
+          typing.remove();
+          addMsg('assistant', 'Chatbot lagi sibuk, coba lagi sebentar lagi ya.');
+        })
+        .finally(function(){ btn.disabled = false; input.focus(); });
+    });
+    widgets[mode] = {open: open, close: close};
+    render();
+  })();
+
+  /* ===== WEBCHAT (ruang chat publik, TANPA AI) ===== */
+  (function(){
+    var mode = 'umum';
+    var API_URL = 'https://ramadanadipa.com/api/webchat';
+    var NAME_KEY = 'rd-webchat-name';
+    var panel = document.getElementById('rdchat-panel-' + mode);
+    var fab = document.getElementById('rdchat-fab-' + mode);
+    var body = document.getElementById('rdchat-body-' + mode);
+    var form = document.getElementById('rdchat-form-' + mode);
+    var nameInput = document.getElementById('rdchat-name-umum');
+    var input = document.getElementById('rdchat-input-umum');
+    var btn = form.querySelector('button');
+    var closeBtn = panel.querySelector('.rdchat-close');
+    var seen = {};
+    var lastId = 0;
+    var pollTimer = null;
+    try { nameInput.value = localStorage.getItem(NAME_KEY) || ''; } catch(e){}
+    function fmtTime(iso){
+      try { return new Date(iso).toLocaleTimeString('id-ID', {hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Jakarta'}); }
+      catch(e){ return ''; }
+    }
+    function myName(){ return nameInput.value.trim(); }
+    function addChat(m){
+      var mine = m.name === myName() && myName() !== '';
+      var div = document.createElement('div');
+      div.className = 'rdchat-msg ' + (mine ? 'mine' : 'other');
+      var meta = document.createElement('div');
+      meta.className = 'rdchat-meta';
+      var nm = document.createElement('b');
+      nm.textContent = m.name;
+      var tm = document.createElement('span');
+      tm.textContent = fmtTime(m.created_at);
+      meta.appendChild(nm);
+      meta.appendChild(tm);
+      var tx = document.createElement('div');
+      tx.textContent = m.body;
+      div.appendChild(meta);
+      div.appendChild(tx);
+      body.appendChild(div);
+      body.scrollTop = body.scrollHeight;
+    }
+    function load(){
+      fetch(API_URL + '?after=' + lastId)
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          (data.messages || []).forEach(function(m){
+            if (seen[m.id]) return;
+            seen[m.id] = true;
+            if (m.id > lastId) lastId = m.id;
+            addChat(m);
+          });
+        })
+        .catch(function(){});
+    }
+    function reset(){
+      body.innerHTML = '';
+      var note = document.createElement('div');
+      note.className = 'rdchat-note';
+      note.textContent = 'Ruang chat publik. Tulis namamu, kirim pesan, semua pengunjung bisa melihatnya.';
+      body.appendChild(note);
+      seen = {};
+      lastId = 0;
+    }
+    function open(){
+      closeOther(mode);
+      panel.classList.add('open');
+      panel.setAttribute('aria-hidden', 'false');
+      fab.classList.add('hidden');
+      reset();
+      load();
+      if (!pollTimer) pollTimer = setInterval(load, 5000);
+      (myName() ? input : nameInput).focus();
+    }
+    function close(){
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+      fab.classList.remove('hidden');
+      if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+    }
+    fab.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+    nameInput.addEventListener('change', function(){
+      try { localStorage.setItem(NAME_KEY, nameInput.value.trim()); } catch(e){}
+    });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = myName();
+      var text = input.value.trim();
+      if (!name) { nameInput.focus(); return; }
+      if (!text || btn.disabled) return;
+      input.value = '';
+      btn.disabled = true;
+      try { localStorage.setItem(NAME_KEY, name); } catch(e){}
+      fetch(API_URL, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name: name, body: text})})
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          if (data && data.message && !seen[data.message.id]) {
+            seen[data.message.id] = true;
+            if (data.message.id > lastId) lastId = data.message.id;
+            addChat(data.message);
+          } else if (data && data.error) {
+            addChat({name: 'Sistem', body: data.error, created_at: new Date().toISOString()});
+          }
+        })
+        .catch(function(){})
+        .finally(function(){ btn.disabled = false; input.focus(); });
+    });
+    widgets[mode] = {open: open, close: close};
+  })();
+})();
+</script>
+
+</body>
+</html>

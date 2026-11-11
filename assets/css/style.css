@@ -444,3 +444,98 @@ a.award:hover{border-color:rgba(201,162,39,.6);translate:10px 0;background:#1515
 .ico{width:1em;height:1em;flex:none;vertical-align:-.14em}
 #toTop>span{display:inline-grid;place-items:center}
 .marquee-track i .ico{width:.72em;height:.72em;vertical-align:-.06em}
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT THEME - ivory paper, dark ink, restrained red/gold.
+   Light is the default (see the head bootstrap script);
+   dark is the original theme, kept intact via :root above.
+   Toggled by #themeBtn, persisted in localStorage (rd-theme).
+   ═══════════════════════════════════════════════════════════ */
+html[data-theme="light"]{
+  --sumi:#f5f1e8;
+  --sumi-2:#efe9db;
+  --sumi-3:#e7dfcb;
+  --paper:#1c1a17;
+  --paper-dim:#5c564a;
+  --hai:#7d7668;
+  --aka:#c22e23;
+  --aka-deep:#9c2318;
+  --kin:#8a6d1a;
+  --line:rgba(28,26,23,.14);
+}
+html[data-theme="light"] body{color:var(--paper)}
+html[data-theme="light"] ::selection{background:var(--aka);color:#fff}
+
+/* Theme toggle button (nav) */
+.theme-toggle{display:inline-flex;align-items:center;gap:.5rem;background:transparent;
+  border:1px solid var(--line);border-radius:20px;padding:.5rem .95rem;cursor:pointer;
+  font-family:var(--font-ui);font-size:.72rem;letter-spacing:.18em;font-weight:600;
+  color:var(--paper);transition:border-color .3s,color .3s,background .3s}
+.theme-toggle:hover{border-color:var(--aka);color:var(--aka)}
+.theme-toggle .theme-icon{font-size:.95rem;line-height:1}
+@media(max-width:860px){.theme-toggle{margin-left:auto}}
+
+/* Canvas + atmosphere: keep the katana and sakura, soften the dark vignette */
+html[data-theme="light"] .vignette{
+  background:radial-gradient(ellipse at 50% 42%,transparent 55%,rgba(120,90,40,.10) 100%)}
+html[data-theme="light"] #scene3d{opacity:.92}
+html[data-theme="light"] .grain{opacity:.04}
+
+/* Surfaces that were hardcoded dark */
+html[data-theme="light"] #preloader{background:#f5f1e8}
+html[data-theme="light"] .pre-bar{background:rgba(28,26,23,.14)}
+html[data-theme="light"] #nav{
+  background:linear-gradient(to bottom,rgba(245,241,232,.88),transparent);
+  border-bottom:1px solid rgba(28,26,23,.08)}
+html[data-theme="light"] #mobileMenu{background:rgba(245,241,232,.97)}
+html[data-theme="light"] .marquee{background:rgba(245,241,232,.72)}
+html[data-theme="light"] .marquee-track.outline-row span{
+  color:transparent;-webkit-text-stroke:1px rgba(28,26,23,.28)}
+html[data-theme="light"] .sec-ghost{
+  color:transparent;-webkit-text-stroke:1px rgba(28,26,23,.07)}
+html[data-theme="light"] .hero-kanji-bg{
+  color:transparent;-webkit-text-stroke:1px rgba(28,26,23,.08)}
+html[data-theme="light"] .side-rail{color:rgba(28,26,23,.45)}
+html[data-theme="light"] .foot-mark{
+  color:transparent;-webkit-text-stroke:1px rgba(28,26,23,.16)}
+html[data-theme="light"] .foot-mark:hover{-webkit-text-stroke:1px rgba(194,46,35,.55)}
+html[data-theme="light"] .pcard-no{
+  color:transparent;-webkit-text-stroke:1px rgba(28,26,23,.25)}
+html[data-theme="light"] ::-webkit-scrollbar-track{background:#e7e0cf}
+html[data-theme="light"] ::-webkit-scrollbar-thumb{background:#b9b2a4;border:2px solid #e7e0cf}
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover{background:var(--aka)}
+
+/* Cards, stats, skills, awards, papers, contact tiles */
+html[data-theme="light"] .pcard{background:#fbf9f3}
+html[data-theme="light"] .pcard:hover{background:#f4eee0}
+html[data-theme="light"] .stat{background:#fbf9f3}
+html[data-theme="light"] .stat:hover{background:#f1eadd}
+html[data-theme="light"] .skill{background:#fbf9f3}
+html[data-theme="light"] .skill:hover{background:#f1eadd}
+html[data-theme="light"] .award{background:#fbf9f3}
+html[data-theme="light"] a.award:hover{background:#f4eee0}
+html[data-theme="light"] .paper{background:#fbf9f3}
+html[data-theme="light"] .paper:hover{background:#f4eee0}
+html[data-theme="light"] .contact-links a{background:#fbf9f3}
+html[data-theme="light"] .contact-links a:hover{background:#f1eadd}
+html[data-theme="light"] .tags span{background:#e9e2d2}
+html[data-theme="light"] .btn-ghost{background:transparent}
+html[data-theme="light"] .btn-ghost:hover{background:#fbf9f3}
+html[data-theme="light"] #toTop{background:#fbf9f3}
+html[data-theme="light"] #toTop .tt-bg{stroke:rgba(28,26,23,.12)}
+html[data-theme="light"] .titem::before{background:var(--sumi)}
+html[data-theme="light"] .about-avatar img{filter:drop-shadow(0 24px 40px rgba(28,26,23,.22))}
+
+/* Chat widgets (FABs stay red/gold; panels and inputs go light) */
+html[data-theme="light"] .rdchat-panel{
+  background:#fbf9f3;color:#1c1a17;border-color:rgba(28,26,23,.16)}
+html[data-theme="light"] .rdchat-head{border-bottom:1px solid rgba(28,26,23,.12)}
+html[data-theme="light"] .rdchat-close{
+  border-color:rgba(28,26,23,.25);color:#1c1a17}
+html[data-theme="light"] .rdchat-form{border-top:1px solid rgba(28,26,23,.12)}
+html[data-theme="light"] .rdchat-form input{
+  background:rgba(28,26,23,.05);border-color:rgba(28,26,23,.18);color:#1c1a17}
+html[data-theme="light"] .rdchat-msg.bot,
+html[data-theme="light"] .rdchat-msg.other{background:rgba(28,26,23,.07)}
+html[data-theme="light"] .rdchat-msg.bot a{color:#a8231a}
+html[data-theme="light"] .rdchat-panel.tanya .rdchat-msg.bot a{color:#8a6d1a}

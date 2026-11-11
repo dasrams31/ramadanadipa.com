@@ -253,10 +253,18 @@
     ttFg.style.strokeDashoffset = String(CIRC * (1 - p));
     toTop.classList.toggle('show', h.scrollTop > 600);
   };
-  window.addEventListener('scroll', () => {
+  function syncNavBg() {
+    const light = document.documentElement.getAttribute('data-theme') === 'light';
     nav.style.background = window.scrollY > 40
-      ? 'linear-gradient(to bottom, rgba(7,7,8,.94), rgba(7,7,8,.75))'
-      : 'linear-gradient(to bottom, rgba(7,7,8,.85), transparent)';
+      ? (light
+        ? 'linear-gradient(to bottom, rgba(245,241,232,.94), rgba(245,241,232,.75))'
+        : 'linear-gradient(to bottom, rgba(7,7,8,.94), rgba(7,7,8,.75))')
+      : (light
+        ? 'linear-gradient(to bottom, rgba(245,241,232,.85), transparent)'
+        : 'linear-gradient(to bottom, rgba(7,7,8,.85), transparent)');
+  }
+  window.addEventListener('scroll', () => {
+    syncNavBg();
     setProg();
   }, { passive: true });
   setProg();
@@ -272,6 +280,30 @@
       mobileMenu.classList.remove('open');
       menuBtn.classList.remove('open');
     }));
+
+  /* ── Theme toggle (light default, persisted as rd-theme) ── */
+  const themeBtn = document.getElementById('themeBtn');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  function paintTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#0b0b0d' : '#f5f1e8');
+    if (themeBtn) {
+      const dark = theme === 'dark';
+      themeBtn.setAttribute('aria-pressed', String(dark));
+      themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      themeBtn.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+      themeBtn.querySelector('.theme-label').textContent = dark ? 'Light' : 'Dark';
+    }
+    syncNavBg();
+  }
+  if (themeBtn) {
+    paintTheme(document.documentElement.getAttribute('data-theme') || 'light');
+    themeBtn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('rd-theme', next); } catch (e) {}
+      paintTheme(next);
+    });
+  }
 
   if (reduced) {
     gsap.set(['#hero .reveal-line > span', '.hero-kanji-bg', '.side-rail', '.scroll-hint', '#nav'],
